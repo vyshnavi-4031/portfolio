@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Portal - Certificates</title>
+  <style>
+      body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  
+
+}
+
+.container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px;
+  background-color: blue;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: gray;
+  padding: 10px 0;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/* ... Previous styles ... */
+
+.certificates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.certificate {
+  width: calc(33.33% - 20px);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.certificate img {
+  width: 100%;
+  height: auto;
+}
+
+.upload {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.upload input[type="file"] {
+  display: none;
+}
+
+.add-certificate {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.add-certificate:hover {
+  background-color: #0056b3;
+}
+
+  </style>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="courses.html">Projects</a></li>
+      <li><a href="grades.html">Grades</a></li>
+      <li><a href="announcements.html">Announcements</a></li>
+      <li><a href="certificates.html">Certificates</a></li>
+      <li><a href="logout.html">Logout</a></li>
+    </ul>
+  </nav>
+  <div class="container">
+    <h2>Your Certificates</h2>
+    <div class="certificates">
+      <div class="certificate">
+        <img src="C:\Users\Vyshnavi\Desktop\portfolio\WebApplication1\web\certificate1.jpg" alt="Certificate 1">
+        <p>SSC marks list</p>
+      </div>
+      <div class="certificate">
+        <img src="C:\Users\Vyshnavi\Desktop\portfolio\WebApplication1\web\certificate2.jpg" alt="Certificate 2">
+        <p>intermediate marks list</p>
+      </div>
+      <div class="certificate">
+        <img src="C:\Users\Vyshnavi\Desktop\portfolio\WebApplication1\web\certificate3.jpg" alt="Certificate 2">
+        <p>intermediate tc</p>
+      </div>
+      <!-- Add more certificate divs here -->
+    </div>
+    <div class="upload">
+      <input type="file" accept="image/*">
+      <button class="add-certificate">+</button>
+    </div>
+  </div>
+  <script>document.addEventListener("DOMContentLoaded", () => {
+    const certificatesContainer = document.querySelector(".certificates");
+    const uploadContainer = document.querySelector(".upload");
+  
+    const addCertificateButton = document.querySelector(".add-certificate");
+    const fileInput = document.createElement("input");
+    fileInput.type = "file";
+    fileInput.accept = "image/*";
+    fileInput.style.display = "none";
+  
+    addCertificateButton.addEventListener("click", () => {
+      uploadContainer.insertBefore(fileInput, addCertificateButton);
+      fileInput.click();
+    });
+  
+    fileInput.addEventListener("change", (event) => {
+      if (event.target.files && event.target.files[0]) {
+        const newCertificateDiv = document.createElement("div");
+        newCertificateDiv.className = "certificate";
+        const newCertificateImg = document.createElement("img");
+        newCertificateImg.src = URL.createObjectURL(event.target.files[0]);
+        newCertificateImg.alt = "New Certificate";
+        newCertificateDiv.appendChild(newCertificateImg);
+        certificatesContainer.appendChild(newCertificateDiv);
+        uploadContainer.removeChild(fileInput);
+      }
+    });
+  });
+  </script>
+</body>
+</html>
+

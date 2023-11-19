@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    body{
+        background-image: url('C:\Users\Vyshnavi\Downloads\background_image.jpeg');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+    }
+    .mySlides {
+      display: none;
+      width:max-content;
+      width:100%;
+    }
+    img {
+      vertical-align: middle;
+      
+    }
+    nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: gray;
+  padding: 10px 0;
+}
+
+nav li {
+  margin: 0 15px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+/* Slideshow container */
+    .slideshow-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-left: 400px;
+      margin-top: 50px;
+      width: 500px;
+      padding: 0;
+      
+    }
+
+/* Caption text */
+    .text {
+      color: #000000;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+
+
+/* The dots/bullets/indicators */
+    .dot {
+      height: 10px;
+      width: 10px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 1.7s ease;
+    }
+
+    .active {
+      background-color: #717171;
+    }
+
+/* Fading animation */
+    .slide {
+        animation-name: slide;
+        animation-duration: 1s; /* Adjust the duration as needed */
+        animation-fill-mode: forwards; /* Keep the last frame of animation */
+    }
+
+    @keyframes slide {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(-100%); /* Slide to the left */
+        }
+    }
+
+/* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+        .text {font-size: 11px}
+    }
+    .events-container {
+      margin-top: 50px;
+      padding: 20px;
+      border-radius: 10px;
+      margin-left: 100px;
+    }
+
+    .events-list {
+      font-size: 16px;
+      color: #333;
+      margin-left: 50px;
+    }
+
+    .events-list li {
+      margin-bottom: 10px;
+      margin-left: 50px;
+    }
+</style>
+<title>Photos and Details</title>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="courses.html">Projects</a></li>
+          <li><a href="grades.html">Grades</a></li>
+          <li><a href="announcements.html">Announcements</a></li>
+          <li><a href="certificates.html">Certificates</a></li>
+          <li><a href="logout.html">Logout</a></li>
+        </ul>
+      </nav>
+  <div class="slideshow-container">
+    <div class="mySlides fade">
+      <img src="C:\Users\Vyshnavi\Desktop\portfolio\WebApplication1\web\vignan1.jpg" >
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="C:\Users\Vyshnavi\Desktop\portfolio\WebApplication1\web\vignan2.jpg">
+    </div>
+    
+    <div class="mySlides fade">
+      <img src="C:\Users\Vyshnavi\Desktop\portfolio\WebApplication1\web\vignan3.jpg" >
+    </div>
+    
+     <div class="mySlides fade">
+        <img src="C:\Users\Vyshnavi\Desktop\portfolio\WebApplication1\web\vignan1.jpg">
+      </div> 
+    
+    <div class="mySlides fade">
+        <img src="C:\Users\Vyshnavi\Desktop\portfolio\WebApplication1\web\vignan1.jpg" >
+      </div>
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span> 
+    </div>
+    <div class="events-container">
+      <h1 style="text-align: center;">VIGNAN'S ACADEMIC EVENTS</h1>
+      <div class="event-list">
+        <h2>January 2023 Events:</h2>
+        <ul>
+          <li>New Year Celebrations.</li>
+          <li>Bhogi Celebrations.</li>
+          <li>Sankranthi Celebrations.</li>
+          <li>Republic Day Celebrations.</li>
+        </ul>
+      </div>
+      <div class="event-list">
+        <h2>February 2023 Events:</h2>
+        <ul>
+          <li>MahaSivaRathri Celebrations.</li>
+          <li>Mahostav Celebrations.</li>
+          <li>Valentine's Day</li>
+        </ul>
+      </div>
+      <div class="event-list">
+        <h2>March 2023 Events:</h2>
+        <ul>
+          <li> International Women's Day Celebrations.</li>
+          <li>World Theatre Art's Day Celebrations.</li>
+          <li>Srujananukura Celebrations.</li>
+        </ul>
+      </div>
+      <div class="event-list">
+        <h2>April 2023 Events:</h2>
+        <ul>
+          <li>Ugadi Celebrations.</li>
+          <li>Sri Ramanavami.</li>
+          <li>Ambedhkar Jayanthi Celebrations.</li>
+        </ul>
+      </div>
+      <div class="event-list">
+        <h2>May 2023 Events:</h2>
+        <ul>
+          <li>May Day Celebrations .</li>
+          <li>Mother's Day Celebrations.</li>
+          <li>Hackathon Celebrations.</li>
+        </ul>
+      </div>
+      <div class="event-list">
+        <h2>June 2023 Events:</h2>
+        <ul>
+          <li>World Environment Day Celebrations.</li>
+          <li>International Environmental Day Celebrations.</li>
+          <li>Father's Day Celebrations.</li>
+        </ul>
+      </div>
+      <div class="event-list">
+        <h2>July 2023 Events:</h2>
+        <ul>
+          <li>Department Fest Celebrations.</li>
+          <li>Kargil Diwas.</li>
+          <li>Hackathon Competetions.</li>
+        </ul>
+      </div>
+      <div class="event-list">
+        <h2>August 2023 Events:</h2>
+        <ul>
+          <li>Friendship Day.</li>
+          <li>Sports Day Celebrations.</li>
+          <li>Independence Day Celebrations.</li>
+        </ul>
+      </div>
+      <div class="event-list">
+        <h2>Sepetember 2023 Events:</h2>
+        <ul>
+          <li>Engineer's Day Celebrations.</li>
+          <li>Vinayaka Chathurdi Celebrations.</li>
+          <li>Freshers Day Celebrations.</li>
+        </ul>
+      </div>
+      <div class="event-list">
+        <h2> October 2023 Events:</h2>
+        <ul>
+          <li>Gandhi Jayanthi Celebrations.</li>
+          <li>Dasara Celebrations.</li>
+          <li>Seminars.</li>
+        </ul>
+      </div>
+      <div class="event-list">
+        <h2>Novemeber 2023 Events:</h2>
+        <ul>
+          <li>Children's Day Celebrations.</li>
+          <li>Diwali Celebrations.</li>
+          <li>Ideathon Competetions.</li>
+        </ul>
+      </div>
+      <div class="event-list">
+        <h2>December 2023 Events:</h2>
+        <ul>
+          <li>Christmas Day Celebrations.</li>
+          <li>It's my story.</li>
+          <li>Human Right Day's .</li>
+        </ul>
+      </div>
+       
+    <script>let slideIndex = 0;
+        showSlides();
+        
+        function showSlides() {
+          let i;
+          let slides = document.getElementsByClassName("mySlides");
+          let dots = document.getElementsByClassName("dot");
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}    
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+          setTimeout(showSlides, 1000); // Change image every 2 seconds
+        }</script>
+  </body>
+  </html>
